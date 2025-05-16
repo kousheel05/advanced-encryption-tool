@@ -69,7 +69,8 @@ authentication and asymmetric algorithms for a complete cryptographic solution. 
 hashing, digital signatures, or authenticated encryption modes.
 
 # OUTPUTS
+![Image](https://github.com/user-attachments/assets/d4f419c1-119d-4b11-aaea-7876369bf45b)
 
-
+![Image](https://github.com/user-attachments/assets/05d7641b-843a-472a-9523-5cbfc8f38c32)
 
 
