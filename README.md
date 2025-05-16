@@ -48,9 +48,13 @@ A cryptographic hash function that produces a fixed 256-bit digest of any input 
 Used for integrity verification but cannot be reversed to plaintext.
 
 .AES-128 using Fernet (easy symmetric encryption with authentication)
+
 .AES-256 using CBC mode (manual key, IV management)
+
 .RSA (2048-bit) for asymmetric encryption/decryption
+
 .SHA-256 and SHA-512 hashing
+
 .Base64 encoding and decoding
 
 # APPLICABILITY
