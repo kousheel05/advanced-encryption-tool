@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Encryption Tool</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>🔐 Advanced Encryption & Hashing Tool</h1>
+    <form method="post">
+        <label>Mode:</label>
+        <select name="mode">
+            <option value="encrypt">Encrypt / Hash</option>
+            <option value="decrypt">Decrypt</option>
+        </select><br>
+
+        <label>Algorithm:</label>
+        <select name="algorithm">
+            <option value="aes128">AES-128 (Fernet)</option>
+            <option value="aes256">AES-256 (CBC)</option>
+            <option value="rsa">RSA (2048-bit)</option>
+            <option value="sha256">SHA-256</option>
+            <option value="sha512">SHA-512</option>
+            <option value="base64">Base64</option>
+        </select><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" rows="4" required></textarea><br>
+
+        <label>Key (for decrypting AES):</label>
+        <textarea name="key"></textarea><br>
+
+        <label>IV (for decrypting AES-256):</label>
+        <textarea name="iv"></textarea><br>
+
+        <label>Private Key (for RSA decryption):</label>
+        <textarea name="private_key"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+        <h3>Result:</h3>
+        <textarea readonly rows="5">{{ result }}</textarea><br>
+    {% endif %}
+    {% if key %}
+        <h3>Key:</h3>
+        <textarea readonly rows="3">{{ key }}</textarea><br>
+    {% endif %}
+    {% if iv %}
+        <h3>IV:</h3>
+        <textarea readonly rows="3">{{ iv }}</textarea><br>
+    {% endif %}
+    {% if private_key %}
+        <h3>Private Key:</h3>
+        <textarea readonly rows="5">{{ private_key }}</textarea><br>
+    {% endif %}
+    {% if public_key %}
+        <h3>Public Key:</h3>
+        <textarea readonly rows="5">{{ public_key }}</textarea><br>
+    {% endif %}
+</div>
+</body>
+</html>
